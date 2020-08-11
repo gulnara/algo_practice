@@ -1,4 +1,4 @@
-# O(n) T | 
+# O(n) T | O(1) S
 def longest_peak(array)
 
   longest_peak_length = 0
