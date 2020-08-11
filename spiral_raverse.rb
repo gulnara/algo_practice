@@ -1,42 +1,85 @@
 
 # O(n) T | O(n) S
 
+# def spiral_traverse(array)
+#   result = []
+#   start_row, end_row = 0 , (array.length - 1)
+#   start_col, end_col = 0, (array[0].length - 1)
+
+#   while (start_row <= end_row) && (start_col <= end_col) do 
+
+#     for col in start_col..end_col do
+#       result.append(array[start_row][col])
+#     end
+
+#     for row in (start_row+1)..end_row do
+#       result.append(array[row][end_col])
+#     end
+
+#     for col in (end_col-1).downto(start_col) do
+#       if start_row == end_row
+#         break
+#       end
+#       result.append(array[end_row][col])
+#     end
+
+#     for row in (end_row-1).downto(start_row+1) do
+#       if start_col == end_col
+#         break
+#       end
+#       result.append(array[row][start_col])
+#     end
+
+#     start_col +=1
+#     end_col -= 1
+#     start_row += 1 
+#     end_row -= 1 
+#   end
+
+#   return result
+# end
+
+
+# O(n) T | O(n) S
+
 def spiral_traverse(array)
   result = []
-  start_row, end_row = 0 , (array.length - 1)
-  start_col, end_col = 0, (array[0].length - 1)
 
-  while (start_row <= end_row) && (start_col <= end_col) do 
+  spiral_fill(array, 0 , array.length - 1, 0, array[0].length - 1, result)
+  return result
 
-    for col in start_col..end_col do
-      result.append(array[start_row][col])
-    end
+end
 
-    for row in (start_row+1)..end_row do
-      result.append(array[row][end_col])
-    end
+def spiral_fill(array, start_row, end_row, start_col, end_col, result)
 
-    for col in (end_col-1).downto(start_col) do
-      if start_row == end_row
-        break
-      end
-      result.append(array[end_row][col])
-    end
-
-    for row in (end_row-1).downto(start_row+1) do
-      if start_col == end_col
-        break
-      end
-      result.append(array[row][start_col])
-    end
-
-    start_col +=1
-    end_col -= 1
-    start_row += 1 
-    end_row -= 1 
+  if start_row > end_row || start_col > end_col
+    return
   end
 
-  return result
+  for col in start_col..end_col do
+    result.append(array[start_row][col])
+  end
+
+  for row in (start_row+1)..end_row do
+    result.append(array[row][end_col])
+  end
+
+  for col in (end_col-1).downto(start_col) do
+    if start_row == end_row
+      break
+    end
+    result.append(array[end_row][col])
+  end
+
+  for row in (end_row-1).downto(start_row+1) do
+    if start_col == end_col
+      break
+    end
+    result.append(array[row][start_col])
+  end
+
+  spiral_fill(array, start_row + 1, end_row - 1, start_col + 1, end_col - 1, result)
+
 end
 
 
