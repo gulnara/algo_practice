@@ -33,3 +33,5 @@ expected = [2, 3, 5, 5, 6, 8, 9]
 actual = bubble_sort(array)
 puts actual
 puts "Should output true: #{actual == expected}"
+
+
