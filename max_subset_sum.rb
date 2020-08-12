@@ -30,16 +30,16 @@ def max_subset_sum(array)
     return array[0]
   end
 
-  second = array[0]
-  first = [array[0], array[1]].max
+  first = array[0]
+  second = [array[0], array[1]].max
 
   for i in 2..(array.length - 1)
-    current = [first, second + array[i]].max
-    second = first
-    first = current
+    current = [second, first + array[i]].max
+    first = second
+    second = current
   end
 
-  return first
+  return second
 
 end
 
