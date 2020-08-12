@@ -1,6 +1,6 @@
 
 # O(nd) time | O(n)spaces
-def number_of_ways_hange(n, denoms)
+def number_of_ways_change(n, denoms)
   ways= Array.new(n+1, 0)
   ways[0] = 1
 
