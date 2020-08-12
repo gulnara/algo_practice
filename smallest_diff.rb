@@ -7,8 +7,12 @@ def smallest_diff(array1, array2)
   idx_one = 0
   idx_two = 0
 
-  smallest = Float::INFINITY
-  current = Float::INFINITY
+  # smallest = Float::INFINITY
+  # current = Float::INFINITY
+
+  smallest = 1.0 / 0
+  current = 1.0 / 0
+
 
   smallest_pair = []
 
