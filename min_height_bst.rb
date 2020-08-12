@@ -100,6 +100,18 @@ def min_height_bst(array)
 end
 
 def construct_min_height_bst(array, start_idx, end_idx)
+  if end_idx < start_idx
+    return
+  end
+
+  mid_idx = (start_idx + end_idx) / 2
+
+  bst = BST.new(array[mid_idx])
+
+  bst.left = construct_min_height_bst(array, start_idx, mid_idx - 1)
+  bst.right = construct_min_height_bst(array, mid_idx + 1, end_idx)
+
+  return bst
 
 end
 
