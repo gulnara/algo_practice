@@ -101,7 +101,7 @@ end
 
 def construct_min_height_bst(array, start_idx, end_idx)
   if end_idx < start_idx
-    return
+    return nil
   end
 
   mid_idx = (start_idx + end_idx) / 2
