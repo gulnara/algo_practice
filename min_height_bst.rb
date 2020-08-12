@@ -37,40 +37,71 @@ def get_tree_height(tree, height=0)
 end
 
 # O(nlog(n)) time | O(n) space
+# def min_height_bst(array)
+#   return construct_min_height_bst(array, nil, 0, array.length - 1)
+# end
+
+# def construct_min_height_bst(array, bst, start_idx, end_idx)
+#   if end_idx < start_idx
+#     return
+#   end
+
+#   mid_idx = (start_idx + end_idx) / 2
+#   value_to_add = array[mid_idx]
+
+#   if bst.nil?
+#     bst = BST.new(value_to_add)
+#   else
+#     bst.insert(value_to_add)
+#   end
+
+#   construct_min_height_bst(array, bst, start_idx, mid_idx - 1)
+#   construct_min_height_bst(array, bst, mid_idx + 1, end_idx)
+#   return bst
+
+# end
+
+# # O(n) time | O(n) space
+# def min_height_bst(array)
+#   return construct_min_height_bst(array, nil, 0, array.length - 1)
+# end
+
+# def construct_min_height_bst(array, bst, start_idx, end_idx)
+#   if end_idx < start_idx
+#     return
+#   end
+
+#   mid_idx = (start_idx + end_idx) / 2
+
+#   new_bst_node = BST.new(array[mid_idx])
+
+#   if bst.nil?
+#     bst = new_bst_node
+#   else
+#     if array[mid_idx] < bst.value
+#       bst.left = new_bst_node
+#       bst = bst.left
+#     else
+#       bst.right = new_bst_node
+#       bst = bst.right
+#     end
+#   end
+
+#   construct_min_height_bst(array, bst, start_idx, mid_idx - 1)
+#   construct_min_height_bst(array, bst, mid_idx + 1, end_idx)
+#   return bst
+
+# end
+
+
+# # O(n) time | O(n) space
 def min_height_bst(array)
-  return construct_min_height_bst(array, nil, 0, array.length - 1)
+  return construct_min_height_bst(array, 0, array.length - 1)
 end
 
-def construct_min_height_bst(array, bst, start_idx, end_idx)
-  if end_idx < start_idx
-    return
-  end
-
-  mid_idx = (start_idx + end_idx) / 2
-  value_to_add = array[mid_idx]
-
-  if bst.nil?
-    bst = BST.new(value_to_add)
-  else
-    bst.insert(value_to_add)
-  end
-
-  construct_min_height_bst(array, bst, start_idx, mid_idx - 1)
-  construct_min_height_bst(array, bst, mid_idx + 1, end_idx)
-  return bst
+def construct_min_height_bst(array, start_idx, end_idx)
 
 end
-
-# # O(n) time | O(n) space
-# def min_height_bst(array)
-
-# end
-
-
-# # O(n) time | O(n) space
-# def min_height_bst(array)
-
-# end
 
 array = [1, 2, 5, 7, 10, 13, 14, 15, 22]
 tree = min_height_bst(array)
