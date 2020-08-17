@@ -22,7 +22,7 @@ def traverse_node(i, j, matrix, visited, sizes)
   nodes_to_explore = [[i,j]]
 
   while nodes_to_explore.length
-    current_node = nodes_to_explore.shift
+    current_node = nodes_to_explore.pop
     i = current_node[0]
     j = current_node[1]
     if visited[i][j]
