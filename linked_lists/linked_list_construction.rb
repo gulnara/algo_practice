@@ -59,6 +59,7 @@ class DoublyLinkedList
     
   end
 
+# O(1) time | O(1) space
   def insert_after(node, node_to_insert)
     if node_to_insert == self.head and node_to_insert == self.tail
       return
@@ -78,8 +79,26 @@ class DoublyLinkedList
     
   end
 
+# O(p) time | O(1) space
   def insert_at_position(position, node_to_insert)
-    
+    if position == 1
+      self.set_head(node_to_insert)
+      return
+    end
+
+    node = self.head
+    current_position = 1
+
+    while !node.nil? && current_position != position
+      node = node.next
+      current_position += 1
+    end
+
+    if !node.nil?
+      self.insert_before(node, node_to_insert)
+    else
+      self.set_tail(node_to_insert)
+    end
   end
 
 # O(n) time | O(1) space
