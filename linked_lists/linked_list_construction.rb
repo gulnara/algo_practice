@@ -19,18 +19,62 @@ class DoublyLinkedList
   end
 
   def set_head(node)
-    
+    if self.head.nil?
+      self.head = node
+      self.tail = node
+      return
+    end
+
+    self.insert_before(self.head, node)
+
   end
 
   def set_tail(node)
+    if self.tail.nil?
+      self.set_head(node)
+      return
+    end
+
+    self.insert_after(self.tail, node)
     
   end
 
+# O(1) time | O(1) space
   def insert_before(node, node_to_insert)
+    if node_to_insert == self.head and node_to_insert == self.tail
+      return
+    end
+
+    self.remove(node_to_insert)
+    node_to_insert.next = node.prev
+    node_to_insert.prev = node
+
+    if node.prev.nil?
+      self.head = node_to_insert
+    else
+      node.prev.next = node_to_insert
+    end
+
+    node.prev = node_to_insert
     
   end
 
   def insert_after(node, node_to_insert)
+    if node_to_insert == self.head and node_to_insert == self.tail
+      return
+    end
+
+    self.remove(node_to_insert)
+    node_to_insert.next = node
+    node_to_insert.prev = node.next
+
+    if node.next.nil?
+      self.tail = node_to_insert
+    else
+      node.next.prev = node_to_insert
+    end
+
+    node.next = node_to_insert
     
   end
 
