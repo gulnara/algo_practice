@@ -15,3 +15,13 @@ class SuffixTrie
   
   end
 end
+
+trie = SuffixTrie.new("babc")
+expected = {
+    "c": {"*": true},
+    "b": {"c": {"*": true}, "a": {"b": {"c": {"*": true}}}},
+    "a": {"b": {"c": {"*": true}}},
+}
+
+puts "Should output true: #{trie.root == expected}"
+puts "Should output true: #{trie.contains("abc")}"
