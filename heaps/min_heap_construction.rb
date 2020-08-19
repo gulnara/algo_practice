@@ -20,12 +20,15 @@ class MinHeap
   end
 
   def remove
-    
+    swap(0, self.heap.length-1, self.heap)
+    value_to_remove = self.heap.pop
+    self.sift_down(0, self.heap.length-1, heap)
+    return value_to_remove
   end
 
   def insert(value)
     self.heap.append(value)
-    self.sift_up()
+    self.sift_up(self.heap.length-1, self.heap)
   end
 
   def swap(i, j, heap)
