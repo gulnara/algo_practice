@@ -5,7 +5,7 @@ class MinHeap
 
 # O(n) time | O(1) space
   def build_heap(array)
-    first_parent_idx = (array.length - 2) / 2
+    first_parent_idx = (array.length - 1) / 2
     (first_parent_idx).downto(0).each { |current_idx| 
       self.sift_down(current_idx, array.length - 1, array)
     }
