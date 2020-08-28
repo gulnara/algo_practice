@@ -16,7 +16,7 @@ def quick_select_helper(array, start_idx, end_idx, position)
     right_idx = end_idx
 
     while left_idx <= right_idx
-      if array[left_idx] > array[right_idx] and array[right_idx] < array[pivot_idx]
+      if array[left_idx] > array[pivot_idx] and array[right_idx] < array[pivot_idx]
         swap(left_idx, right_idx, array)
       end
 
@@ -27,17 +27,17 @@ def quick_select_helper(array, start_idx, end_idx, position)
       if array[right_idx] >= array[pivot_idx]
         right_idx -= 1
       end
-
-      swap(pivot_idx, right_idx, array)
-
-      if right_idx == position
-        return array[right_idx]
-      elsif right_idx < position
-        start_idx = right_idx + 1
-      else
-        end_idx = right_idx - 1
-      end
     end
+    swap(pivot_idx, right_idx, array)
+
+    if right_idx == position
+      return array[right_idx]
+    elsif right_idx < position
+      start_idx = right_idx + 1
+    else
+      end_idx = right_idx - 1
+    end
+    
 
   end
 end
