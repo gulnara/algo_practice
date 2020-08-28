@@ -1,4 +1,4 @@
-
+# O (n + m) time | O(1) s
 def search_in_sorted_matrix(matrix, target)
   row = 0 
   col = matrix[0].length - 1

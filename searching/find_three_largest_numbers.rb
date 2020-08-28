@@ -11,7 +11,7 @@ def find_three_largest_numbers(array)
 end
 
 def update_largest(largest_three, item)
-  puts largest_three
+
   if largest_three[2].nil? || item > largest_three[2]
     shift_and_update(largest_three, item, 2)
   elsif largest_three[1].nil? || item > largest_three[1]
