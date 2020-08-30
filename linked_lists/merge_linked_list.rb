@@ -43,4 +43,47 @@ def merge_linked_list(head_one, head_two)
 end
 
 
+# recursive
+#  O(n+m) time | O(n+m) space
+def merge_linked_list(head_one, head_two)
+  recursive_merge(head_one, head_two, nil)
+  if head_one.value < head_two.value
+    return head_one
+  else
+    return head_two
+  end
+end
+
+def recursive_merge(p1, p2, p1_prev)
+
+  if p1.nil?
+    p1_prev.next = p2
+    return
+  end
+
+  if p2.nil?
+    return
+  end
+
+  if p1.value < p2.value
+    recursive_merge(p1.next, p2, p1)
+  else
+    if !p1_prev.nil?
+      p1_prev.next = p2
+    end
+    new_p2 = p2.next
+    p2.next = p1
+    recursive_merge(p1, new_p2, p2)
+  end
+
+end
+
+
+
+
+
+
+
+
+
 
