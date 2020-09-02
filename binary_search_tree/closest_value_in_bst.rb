@@ -17,22 +17,22 @@ end
 # recursive approach
 # avg O(lg(n)) TS
 # worst O(n) TS
-# def find_closest_value_in_bst_helper(tree, target, closest)
-#   if tree.nil?
-#     return closest
-#   end
-#   if (target - closest).abs  > (target - tree.value).abs
-#     closest = tree.value
-#   end
-#   if target < tree.value
-#     return find_closest_value_in_bst_helper(tree.left, target, closest)
-#   elsif target > tree.value
-#     return find_closest_value_in_bst_helper(tree.right, target, closest)
-#   else
-#     return closest
-#   end
+def find_closest_value_in_bst_helper(tree, target, closest)
+  if tree.nil?
+    return closest
+  end
+  if (target - closest).abs  > (target - tree.value).abs
+    closest = tree.value
+  end
+  if target < tree.value
+    return find_closest_value_in_bst_helper(tree.left, target, closest)
+  elsif target > tree.value
+    return find_closest_value_in_bst_helper(tree.right, target, closest)
+  else
+    return closest
+  end
 
-# end
+end
 
 
 # itterative approach

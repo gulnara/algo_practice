@@ -2,23 +2,23 @@
 
 # maxsum[i] = [maxsum[i-1], maxsum[i-2] + array[i]]max
 
-# def max_subset_sum(array)
-#   if array.length == 0
-#     return
-#   elsif array.length == 1
-#     return array[0]
-#   end
+def max_subset_sum(array)
+  if array.length == 0
+    return
+  elsif array.length == 1
+    return array[0]
+  end
 
-#   maxsums = [array[0]]
-#   maxsums[1] = [array[0], array[1]].max
+  maxsums = [array[0]]
+  maxsums[1] = [array[0], array[1]].max
 
-#   for i in 2..(array.length - 1)
-#     maxsums[i] = [maxsums[i-1], maxsums[i-2] + array[i]].max
-#   end
+  for i in 2..(array.length - 1)
+    maxsums[i] = [maxsums[i-1], maxsums[i-2] + array[i]].max
+  end
 
-#   return maxsums[-1]
+  return maxsums[-1]
 
-# end
+end
 
 
 # # O(n) t | O(1) s
