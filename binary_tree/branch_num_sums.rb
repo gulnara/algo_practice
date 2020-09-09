@@ -66,7 +66,7 @@ root.left.right = BinaryTree.new(5)
 root.right = BinaryTree.new(3)
 
 
-expected = [15, 16, 18, 10, 11]
+expected = 262
 actual = branchSums(root)
 puts actual
 
