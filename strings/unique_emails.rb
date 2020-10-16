@@ -15,7 +15,6 @@ def num_unique_emails(emails)
     end
 
     return counter
-    
 end
 
 emails = ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
