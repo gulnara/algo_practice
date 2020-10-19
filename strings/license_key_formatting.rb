@@ -22,16 +22,16 @@ def license_key_formatting(s, k)
       new_string = new_string.upcase + "-" + rest_sub_string[begin_index..end_index].upcase
     end 
 
-    begin_index += k
-    end_index = begin_index + k
+    begin_index = end_index + 1
+    end_index = begin_index + k - 1
   end
  
 
   return new_string
 end
 
-s = "2-5g-3-J"
-k = 2
+s = "a-a-a-a-"
+k = 1
 
 puts license_key_formatting(s, k)
 
