@@ -13,7 +13,7 @@ def matching_brackets(string)
     if open_brackets.include?(char)
       stack.push(char)
     elsif close_brackets.include?(char)
-      if stack[-1] = open_to_close[char]
+      if stack[-1] == open_to_close[char]
         stack.pop()
       else
         return false
@@ -24,5 +24,5 @@ def matching_brackets(string)
   return stack.length == 0
 end
 
-s = "()[]{}"
+s = "(]"
 puts matching_brackets(s)
