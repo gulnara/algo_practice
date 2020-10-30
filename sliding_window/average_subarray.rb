@@ -1,3 +1,4 @@
+# O(n) time
 def find_averages_of_subarrays(k, arr)
   result = []
   sum = 0.0
