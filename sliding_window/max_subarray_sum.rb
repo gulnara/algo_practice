@@ -1,4 +1,4 @@
-# O(n) TS
+# O(n) T| O(1) S
 def max_sub_array_of_size_k(k, arr)
   max_sum, sum = 0, 0
   start_index = 0
