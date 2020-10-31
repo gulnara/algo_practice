@@ -3,3 +3,6 @@
 def smallest_subarray_with_given_sum(s, arr)
 end
 
+puts "Smallest subarray length: " + smallest_subarray_with_given_sum(7, [2, 1, 5, 2, 3, 2]).to_s
+puts "Smallest subarray length: " + smallest_subarray_with_given_sum(7, [2, 1, 5, 2, 8]).to_s
+puts "Smallest subarray length: " + smallest_subarray_with_given_sum(8, [3, 4, 1, 1, 6]).to_s
