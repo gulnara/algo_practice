@@ -1,3 +1,5 @@
+# Given an array, find the average of all contiguous subarrays of size ‘K’ in it.
+
 # O(n) time
 def find_averages_of_subarrays(k, arr)
   result = []
