@@ -1,3 +1,6 @@
+
+# O(n) T | O(k) S
+
 def longest_substring_with_k_distinct(str1, k)
   start_index = 0
   max_length = 0
