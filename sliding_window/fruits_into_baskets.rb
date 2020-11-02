@@ -4,7 +4,7 @@
 
 # Write a function to return the maximum number of fruits in both the baskets.
 
-
+# O(n)T | O(1)S
 def fruits_into_baskets(fruits)
 
   fruit_baskets = {}
