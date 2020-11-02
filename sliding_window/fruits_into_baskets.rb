@@ -34,3 +34,9 @@ end
 puts "Maximum number of fruits: " + fruits_into_baskets(['A', 'B', 'C', 'A', 'C']).to_s
 puts "Maximum number of fruits: " + fruits_into_baskets(['A', 'B', 'C', 'B', 'B', 'C']).to_s
 
+# Similar Problems #
+# Problem 1: Longest Substring with at most 2 distinct characters
+
+# Given a string, find the length of the longest substring in it with at most two distinct characters.
+
+# Solution: This problem is exactly similar to our parent problem.
