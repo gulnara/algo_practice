@@ -1,5 +1,7 @@
 # Given an array containing 0s and 1s, if you are allowed to replace no more than ‘k’ 0s with 1s, find the length of the longest contiguous subarray having all 1s.
 
+# O(n) T | O(1) S
+
 def length_of_longest_substring(arr, k)
 
   start_index, max_length, max_ones = 0, 0, 0
