@@ -2,6 +2,7 @@
 
 # Write a function to return the indices of the two numbers (i.e. the pair) such that they add up to the given target.
 
+# O(n) T | O(1) S
 def pair_with_targetsum(arr, target_sum)
   left = 0
   right = arr.length - 1
