@@ -1,5 +1,6 @@
 # This problem is quite similar to our parent problem. We can follow a two-pointer approach and shift numbers left upon encountering the ‘key’. Here is what the code will look like
 
+# O(n) T | O(1) S
 def remove_element(arr, key)
   next_element = 0
 
