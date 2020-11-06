@@ -7,26 +7,18 @@ def make_squares(arr)
   squares = Array.new(arr.length, 0)
   last = squares.length - 1
 
-  while left < right do
+  while left <= right do
     left_sq = arr[left] * arr[left]
     right_sq = arr[right] * arr[right]
 
     if left_sq > right_sq
       squares[last] = left_sq
       left += 1
-      last -= 1
-    elsif left_sq < right_sq
+    elsif 
       squares[last] = right_sq
       right -= 1
-      last -= 1
-    elsif left_sq == right_sq
-      squares[last] = left_sq
-      last -= 1
-      squares[last] = right_sq
-      last -= 1
-      right -= 1
-      left += 1
     end
+    last -= 1
   end
 
   return squares
