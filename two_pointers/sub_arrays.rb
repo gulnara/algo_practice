@@ -8,21 +8,21 @@ def find_subarrays(arr, target)
 
   for right in 0..(arr.length - 1)
     product *= arr[right]
-
+    temp = []
     while product >= target and left < arr.length
       product /= arr[left]
       left += 1
     end
 
-    temp = []
+    
 
     for i in (right).downto(left) do
 
       temp.append(arr[i])
 
-      result.append(temp)
+      # result.append(temp)
     end
-   
+   result.append(temp)
 
   end
   puts "#{result}"
