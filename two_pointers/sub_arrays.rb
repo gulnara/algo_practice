@@ -4,8 +4,6 @@ def find_subarrays(arr, target)
   left = 0
   result = []
   product = 1
-
-
   for right in 0..(arr.length - 1)
     product *= arr[right]
     temp = []
@@ -13,13 +11,8 @@ def find_subarrays(arr, target)
       product /= arr[left]
       left += 1
     end
-
-    
-
     for i in (right).downto(left) do
-
       temp.append(arr[i])
-
       # result.append(temp)
     end
    result.append(temp)
@@ -27,8 +20,9 @@ def find_subarrays(arr, target)
   end
   puts "#{result}"
   return result
-
 end
+
+
 
 # def find_subarrays(arr, target)
 #   return 0 if target == 0
