@@ -11,15 +11,32 @@ def find_subarrays(arr, target)
       product /= arr[left]
       left += 1
     end
-    for i in (right).downto(left) do
-      temp.append(arr[i])
-      # result.append(temp)
-    end
+    # for i in (right).downto(left) do
+    #   temp.append(arr[i])
+    #   # result.append(temp)
+    # end
+    temp = helper(arr, left, right)
    result.append(temp)
 
   end
   puts "#{result}"
   return result
+end
+
+
+def helper(arr, left, right)
+  temp = []
+  if right == arr.length
+    return temp
+  elsif left > right
+    helper(arr, 0, right + 1)
+  else
+    puts "#{arr[left..right]}"
+    temp << arr[left..right]
+    helper(arr, left + 1, right)
+  end
+  # return temp
+
 end
 
 
