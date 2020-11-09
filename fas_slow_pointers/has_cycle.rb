@@ -1,4 +1,5 @@
 # Given the head of a Singly LinkedList, write a function to determine if the LinkedList has a cycle in it or not.
+# O(n) T | O(1) S
 
 class Node
   attr_accessor :value, :next
