@@ -1,3 +1,4 @@
+# O(n) T | O(1) S
 
 class Node
 
