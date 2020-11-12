@@ -1,6 +1,7 @@
 
 # Given the head of a Singly LinkedList, write a method to return the middle node of the LinkedList.
 
+# O(n) T | O(1) S
 
 class Node
 
@@ -23,3 +24,11 @@ def find_middle_of_linked_list(head)
 
   return slow
 end
+
+head = Node.new(1)
+head.next = Node.new(2)
+head.next.next = Node.new(3)
+head.next.next.next = Node.new(4)
+head.next.next.next.next = Node.new(5)
+
+puts "What is a middle of the list?: #{find_middle_of_linked_list(head).value.to_s}"
