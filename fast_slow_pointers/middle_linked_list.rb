@@ -14,6 +14,12 @@ end
 
 
 def find_middle_of_linked_list(head)
+  fast, slow = head, head
 
+  while !fast.nil? and !fast.next.nil?
+    slow = slow.next
+    fast = fast.next.next
+  end
 
+  return slow
 end
