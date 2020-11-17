@@ -18,4 +18,21 @@ def merge(intervals)
     return intervals
   end
 
+  merged_intervals = []
+  start_point = intervals[0].start_point
+  end_point = intervals[0].end_point
+
+  for i in 1..(intervals.length - 1)
+    interval = intervals[i]
+    if interval.start_point <= end_point
+      end_point = [interval.end_point, end_point]
+    else
+      merged_intervals.append(Interval(start_point, end_point))
+      start_point = interval.start_point
+      end_point = interval.end_point
+    end
+  end
+
+  merged_intervals.append(Interval(start_point, end_point))
+  return merged_intervals
 end
