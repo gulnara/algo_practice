@@ -1,5 +1,6 @@
 # Given a list of intervals, merge all the overlapping intervals to produce a list that has only mutually exclusive intervals.
 
+# O(N*logN) T | O(N) S
 class Interval
   attr_accessor :start_point, :end_point
 
