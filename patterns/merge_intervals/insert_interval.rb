@@ -4,6 +4,14 @@ def insert(intervals, new_interval)
 	merged = []
 	i, start_point, end_point = 0, 0, 1
 
+	# skip (and add to output) all intervals that come before the 'new_interval'
+	while i < intervals.length and intervals[i][end_point] < new_interval[start_point]
+		merged.append(intervals[i])
+		i += 1
+	end
+
+
+
 end
 
 puts "Intervals after inserting the new interval: #{insert([[1, 3], [5, 7], [8, 12]], [4, 6]).to_s}"
