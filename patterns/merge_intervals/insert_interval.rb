@@ -11,7 +11,7 @@ def insert(intervals, new_interval)
 	end
 
 	# merge all intervals that overlap with 'new_interval'
-	while i < intervals.length and intervals[i][start] <= new_interval[end_point]
+	while i < intervals.length and intervals[i][start_point] <= new_interval[end_point]
 		new_interval[start_point] = [intervals[i][start_point], new_interval[start_point]].min
 		new_interval[end_point] = [intervals[i][end_point], new_interval[end_point]].max
 		i += 1
