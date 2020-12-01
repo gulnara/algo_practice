@@ -19,6 +19,12 @@ def insert(intervals, new_interval)
 
 	merged.append(new_interval)
 
+	while i < intervals.length
+		merged.append(intervals[i])
+		i += 1
+	end
+
+	return merged
 
 end
 
