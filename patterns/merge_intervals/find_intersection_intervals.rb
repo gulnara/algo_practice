@@ -1,5 +1,7 @@
 # Given two lists of intervals, find the intersection of these two lists. Each list consists of disjoint intervals sorted on their start time.
 
+# O(M+N) T | O(1) S
+
 def merge(intervals_a, intervals_b)
 	merged = []
 
