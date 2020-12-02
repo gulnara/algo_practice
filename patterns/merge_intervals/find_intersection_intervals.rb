@@ -8,14 +8,28 @@ def merge(intervals_a, intervals_b)
 	while i < intervals_a.length and j < intervals_b.length
 
 		# check if intervals overlap and intervals_a[i]'s start time lies within the other intervals_b[j]
+		a_overlaps_b = intervals_a[i][start_point] >= intervals_b[j][start_point] and intervals_a[i][start_point] <= intervals_b[j][end_point]
 
-		# check if intervals overlap and intervals_a[j]'s start time lies within the other intervals_b[i]
+		# check if intervals overlap and intervals_b[j]'s start time lies within the other intervals_a[i]
+		b_overlaps_a = intervals_b[j][start_point] >= intervals_a[a][start_point] and intervals_b[j][start_point] <= intervals_a[i][end_point]
 
 		# store the the intersection part
 
+		if a_overlaps_b or b_overlaps_a
+			merged.append([[intervals_a[i][start_point], intervals_b[j][start_point]].max, [intervals_a[i][end_point],intervals_b[j][end_point]].min])
+		end
+
 		# move next from the interval which is finishing first
 
+		if intervals_a[i][end_point] < intervals_b[j][end_point]
+			i += 1
+		else
+			j += 1
+		end
+
 	end
+
+	return merged
 
 end
 
