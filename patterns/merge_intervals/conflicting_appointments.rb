@@ -1,5 +1,7 @@
 # Given an array of intervals representing ‘N’ appointments, find out if a person can attend all the appointments.
 
+# O(N logN) T | O(N) S 
+
 def can_attend_all_appointments(intervals)
 	intervals = intervals.sort_by {|el| el[0] }
 	start_point, end_point = 0, 1
