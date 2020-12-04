@@ -8,3 +8,13 @@
 def cyclic_sort(nums)
 
 end
+
+puts cyclic_sort([3, 1, 5, 4, 2])
+puts cyclic_sort([2, 6, 4, 3, 1, 5])
+puts cyclic_sort([1, 5, 6, 4, 3, 2])
+
+# Output:
+# [1, 2, 3, 4, 5]
+# [1, 2, 3, 4, 5, 6]
+# [1, 2, 3, 4, 5, 6]
+
