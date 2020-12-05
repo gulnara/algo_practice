@@ -5,6 +5,24 @@
 
 def find_missing_number(nums)
 
+	i, n = 0, nums.length
+	while i < n
+		j = nums[i]
+		if nums[i] < n && nums[i] != nums[j]
+			nums[i], nums[j] = nums[j], nums[i]
+		else
+			i += 1
+		end
+	end
+
+	for i in 0..(n-1)
+		if nums[i] != i
+			return i
+		end
+	end
+
+	return n
+
 end
 
 puts find_missing_number([4, 0, 3, 1])
