@@ -3,6 +3,8 @@
 # Input: [4, 0, 3, 1]
 # Output: 2
 
+# O(n) T | O(1) S
+
 def find_missing_number(nums)
 
 	i, n = 0, nums.length
