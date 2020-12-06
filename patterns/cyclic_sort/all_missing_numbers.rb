@@ -20,8 +20,8 @@ def find_missing_numbers(nums)
 	missing = []
 
 	for i in 0..(nums.length-1)
-		if nums[i] != i
-			missing.append(nums[i])
+		if nums[i] != i + 1
+			missing.append(i + 1)
 		end
 	end
 
