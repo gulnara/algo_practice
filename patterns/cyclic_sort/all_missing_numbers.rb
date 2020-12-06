@@ -4,6 +4,8 @@
 # Output: 4, 6, 7
 # Explanation: The array should have all numbers from 1 to 8, due to duplicates 4, 6, and 7 are missing.
 
+# O(n) T | O(1) S
+
 def find_missing_numbers(nums)
 
 	i = 0
