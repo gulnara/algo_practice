@@ -6,3 +6,7 @@
 def find_duplicate(nums)
 
 end
+
+puts find_duplicate([1, 4, 4, 3, 2])
+puts find_duplicate([2, 1, 3, 3, 5, 4])
+puts find_duplicate([2, 4, 1, 4, 4])
