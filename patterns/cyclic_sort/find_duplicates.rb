@@ -3,6 +3,8 @@
 # Input: [1, 4, 4, 3, 2]
 # Output: 4
 
+# O(n) T | O(1) S 
+
 def find_duplicate(nums)
 	i = 0
 
