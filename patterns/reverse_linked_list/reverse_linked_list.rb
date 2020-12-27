@@ -11,12 +11,14 @@ class Node
 
 end
 
+
+# O(N) T | O(1) S 
+
 def reverse(head)
 
 	current = head
 	previous = nil
 	next_node = nil
-
 
 	while !current.nil?
 		next_node = current.next
@@ -26,7 +28,6 @@ def reverse(head)
 	end
 
 	return previous
-
 end
 
 
