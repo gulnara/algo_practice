@@ -3,6 +3,9 @@
 # Input: [3, 4, 4, 5, 5]
 # Output: [4, 5]
 
+
+# O(N) T | O(N) S 
+
 def find_all_duplicates(nums)
 
 	i = 0 
