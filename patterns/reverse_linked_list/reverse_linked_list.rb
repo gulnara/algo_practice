@@ -13,15 +13,29 @@ end
 
 def reverse(head)
 
+	current = head
+	previous = nil
+	next_node = nil
 
+
+	while !current.nil?
+		next_node = current.next
+		current.next = previous
+		previous = current
+		current = next_node
+	end
+
+	return previous
 
 end
 
 
-head = Node(2)
-head.next = Node(4)
-head.next.next = Node(6)
-head.next.next.next = Node(8)
-head.next.next.next.next = Node(10)
+# 2 -> 4 -> 6 -> 8 -> 10
+
+head = Node.new(2)
+head.next = Node.new(4)
+head.next.next = Node.new(6)
+head.next.next.next = Node.new(8)
+head.next.next.next.next = Node.new(10)
 result = reverse(head)
 puts result.value
