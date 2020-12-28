@@ -86,7 +86,6 @@ head.next.next = Node.new(6)
 head.next.next.next = Node.new(8)
 head.next.next.next.next = Node.new(10)
 result = reverse_sub_list(head, 2, 4)
-# puts result
 result.print_list
 
 

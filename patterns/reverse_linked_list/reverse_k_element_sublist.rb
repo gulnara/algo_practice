@@ -21,6 +21,14 @@ class Node
 
 end
 
+def reverse_sub_list(head, k)
+	if k <= 1 or head.nil?
+		return head
+	end
+
+
+end
+
 
 # 2 -> 4 -> 6 -> 8 -> 10 -> 13 -> 15
 
@@ -31,3 +39,5 @@ head.next.next.next = Node.new(8)
 head.next.next.next.next = Node.new(10)
 head.next.next.next.next.next = Node.new(13)
 head.next.next.next.next.next.next = Node.new(15)
+result = reverse_sub_list(head, 3)
+result.print_list
