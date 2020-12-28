@@ -19,6 +19,8 @@ class Node
 
 end
 
+# O(N) T | O(1) S 
+
 def reverse_sub_list(head, s, q)
 
 	if s == q
