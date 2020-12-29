@@ -14,8 +14,34 @@ end
 
 
 def bfs_reverse_traversal(node)
+	result = []
 
+	if node.nil?
+		return result
+	end
 
+	queue = []
+	queue.append(node)
+	while !queue.empty?
+		length = queue.length
+		current_level = []
+
+		for i in 0..(length - 1)
+			current_node = queue.shift()
+			current_level.append(current_node.value)
+
+			if current_node.left
+				queue.append(current_node.left)
+			end
+
+			if current_node.right
+				queue.append(current_node.right)
+			end
+		end
+
+		result.unshift(current_level)
+	end
+	return result
 end
 
 
