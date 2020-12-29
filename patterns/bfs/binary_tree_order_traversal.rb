@@ -23,7 +23,7 @@ def bfs_traversal(root)
 	queue = []
 	queue.append(root)
 
-	while queue
+	while !queue.empty?
 		level_size = queue.length
 		current_level = []
 
@@ -56,4 +56,4 @@ root.left.left = TreeNode.new(9)
 root.right.left = TreeNode.new(10)
 root.right.right = TreeNode.new(5)
 
-puts bfs_traversal(root)
+puts "Level order traversal: " + bfs_traversal(root).to_s
