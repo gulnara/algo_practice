@@ -27,7 +27,7 @@ def reverse_sub_list(head, k)
 	end
 
 	current = head
-	previous = nil
+	previous = nil 
 
 	while !current.nil?
 		last_node_of_previous_part = previous
