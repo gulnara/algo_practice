@@ -26,11 +26,40 @@ def reverse_sub_list(head, k)
 		return head
 	end
 
+	current = head
+	previous = nil
 
+	while !current.nil?
+		last_node_of_previous_part = previous
+		last_node_of_sub_list = current
+		next_node = nil
+		i = 0
+
+		while !current.nil? and i < k
+				next_node = current.next
+				current.next = previous
+				previous = current
+				current = next_node
+				i += 1
+		end
+
+		if !last_node_of_previous_part.nil?
+			last_node_of_previous_part.next = previous
+		else
+			head = previous
+		end
+
+		last_node_of_sub_list.next = current
+		previous = last_node_of_sub_list
+	end
+
+	return head
 end
 
 
 # 2 -> 4 -> 6 -> 8 -> 10 -> 13 -> 15
+
+# 6 -> 4 -> 2 -> 13 -> 10 -> 8 -> 15
 
 head = Node.new(2)
 head.next = Node.new(4)
