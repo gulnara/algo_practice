@@ -12,7 +12,7 @@ class TreeNode
 	end
 end
 
-
+# O(N) T S
 def has_path(root, sum)
 	if root.nil?
 		return false
