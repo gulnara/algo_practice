@@ -23,7 +23,7 @@ def zigzag_traversal(node)
 	queue.append(node)
 	left_direction = true
 
-	while !queue.nil?
+	while !queue.empty?
 		current_level = []
 		level_size = queue.length
 
@@ -43,10 +43,11 @@ def zigzag_traversal(node)
 			if current_node.right
 				queue.append(current_node.right)
 			end
-			left_direction = false
+			
 		end
 
 		result.append(current_level)
+		left_direction = !left_direction
 	end
 	return result
 end
@@ -57,5 +58,13 @@ root.right = TreeNode.new(1)
 root.left.left = TreeNode.new(9)
 root.right.left = TreeNode.new(10)
 root.right.right = TreeNode.new(5)
+root.right.left.left = TreeNode.new(20)
+root.right.left.right = TreeNode.new(17)
 
 puts "Level order traversal: " + zigzag_traversal(root).to_s
+
+# [[12], [1, 7], [9, 10, 5], [17, 20]]
+# [[12], [1, 7], [9, 10, 5], [17, 20]]
+
+
+
