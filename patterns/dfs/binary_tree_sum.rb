@@ -5,10 +5,10 @@ class TreeNode
 
 	attr_accessor :value, :left, :right
 
-	def initialize(value)
+	def initialize(value, left = nil, right = nil)
 		@value = value
-		@left = nil
-		@right = nil
+		@left = left
+		@right = right
 	end
 end
 
@@ -22,9 +22,15 @@ def has_path(root, sum)
 		return true
 	end
 
-	has_path(root.right, sum - root.value)
-	has_path(root.left, sum - root.value)
+	if has_path(root.left, sum - root.value) == true
+		return true
+	end
 
+	if has_path(root.right, sum - root.value) == true
+		return true
+	end
+	
+	return false
 end
 
 
