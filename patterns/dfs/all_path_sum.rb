@@ -27,14 +27,14 @@ def find_paths_recursive(current_node, sum, current_path, all_paths)
 
 	current_path.append(current_node.value)
 
-
 	if current_node.value == sum and current_node.left.nil? and current_node.right.nil?
-		all_paths.append(current_path)
+		all_paths.append(Array.new(current_path))
 	else
 		find_paths_recursive(current_node.left, sum - current_node.value, current_path, all_paths)
 		find_paths_recursive(current_node.right, sum - current_node.value, current_path, all_paths)
 	end
 
+	current_path.pop()
 
 end
 
