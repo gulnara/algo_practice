@@ -14,6 +14,28 @@ end
 
 def find_paths(root, sum)
 
+	all_paths = []
+	find_paths_recursive(root, sum, [], all_paths)
+	return all_paths
+end
+
+
+def find_paths_recursive(current_node, sum, current_path, all_paths)
+	if current_node.nil?
+		return 
+	end
+
+	current_path.append(current_node.value)
+
+
+	if current_node.value == sum and current_node.left.nil? and current_node.right.nil?
+		all_paths.append(current_path)
+	else
+		find_paths_recursive(current_node.left, sum - current_node.value, current_path, all_paths)
+		find_paths_recursive(current_node.right, sum - current_node.value, current_path, all_paths)
+	end
+
+
 end
 
 root = TreeNode.new(12)
@@ -26,4 +48,3 @@ sum = 23
 
 puts "Tree paths with sum " + sum.to_s +
         ": " + find_paths(root, sum).to_s
-        
