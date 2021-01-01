@@ -23,7 +23,11 @@ def recursive_root_path(current_node, current_path, all_paths)
 		return
 	end
 
-	current_path.append(Array.new(current_node.value))
+	current_path.append(current_node.value)
+
+	if current_node.left.nil? and current_node.right.nil?
+		all_paths.append(Array.new(current_path))
+	end
 
 	recursive_root_path(current_node.left, current_path, all_paths)
 	recursive_root_path(current_node.right, current_path, all_paths)
