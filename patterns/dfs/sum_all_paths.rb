@@ -13,27 +13,44 @@ class TreeNode
 end
 
 
+# def find_sum_of_path_numbers(root)
+# 	sum = []
+# 	recusive_sum(root, "", sum)
+# 	return sum.sum()
+# end
+
+# def recusive_sum(current_node, running_sum_string, sum)
+# 	if current_node.nil?
+# 		return
+# 	end
+
+# 	running_sum_string += current_node.value.to_s
+
+# 	if current_node.left.nil? and current_node.right.nil?
+# 		sum.append(running_sum_string.to_i)
+# 	end
+
+# 	recusive_sum(current_node.left, running_sum_string, sum)
+# 	recusive_sum(current_node.right, running_sum_string, sum)
+
+# end
+
 def find_sum_of_path_numbers(root)
-	sum = []
-	recusive_sum(root, "", sum)
-	return sum.sum()
+	return recusive_sum(root, 0)
 end
 
-def recusive_sum(current_node, running_sum_string, sum)
+def recusive_sum(current_node, sum)
 	if current_node.nil?
-		return
+		return 0
 	end
 
-	running_sum_string += current_node.value.to_s
+	sum = 10 * sum + current_node.value
 
 	if current_node.left.nil? and current_node.right.nil?
-		sum.append(running_sum_string.to_i)
+		return sum
 	end
 
-	recusive_sum(current_node.left, running_sum_string, sum)
-	recusive_sum(current_node.right, running_sum_string, sum)
-
-	# current_node.pop()
+	return recusive_sum(current_node.left, sum) + recusive_sum(current_node.right, sum)
 
 end
 
