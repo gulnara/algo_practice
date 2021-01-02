@@ -14,6 +14,28 @@ end
 
 
 def find_sum_of_path_numbers(root)
+	sum = 0
+	recusive_sum(root, "", sum)
+	return sum
+end
+
+def recusive_sum(current_node, running_sum_string, sum)
+	if current_node.nil?
+		return
+	end
+
+	running_sum_string += current_node.value.to_s
+
+	if current_node.left.nil? and current_node.right.nil?
+		sum += running_sum_string.to_i
+	end
+
+	recusive_sum(current_node.left, running_sum_string, sum)
+	recusive_sum(current_node.right, running_sum_string, sum)
+
+	current_node.pop()
+
+end
 
 end
 
