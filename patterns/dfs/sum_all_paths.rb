@@ -34,6 +34,8 @@ end
 # 	recusive_sum(current_node.right, running_sum_string, sum)
 
 # end
+ 
+# O(N) T | S 
 
 def find_sum_of_path_numbers(root)
 	return recusive_sum(root, 0)
