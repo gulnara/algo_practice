@@ -4,6 +4,8 @@
 # Input: [1, 3]
 # Output: [], [1], [3], [1,3]
 
+# O(N∗2^N) T S
+
 
 def find_subsets(nums)
 	subsets =[]
