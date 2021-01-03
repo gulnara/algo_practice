@@ -8,7 +8,15 @@
 
 class MedianOfStream
 
+	max_heap = []
+	min_heap = []
+
 	def insert_num(self, num)
+		if min_heap.empty? or min_heap[-1] >= num
+			min_heap.append(num)
+		else
+			min_heap.append(num)
+		end
 
 	end
 
@@ -22,10 +30,10 @@ end
 medianOfAStream = MedianOfStream.new()
 medianOfAStream.insert_num(3)
 medianOfAStream.insert_num(1)
-puts "The median is: " + medianOfAStream.find_median.to_s
-medianOfAStream.insert_num(5)
-puts "The median is: " + medianOfAStream.find_median.to_s
-medianOfAStream.insert_num(4)
-puts "The median is: " + medianOfAStream.find_median.to_s
+# puts "The median is: " + medianOfAStream.find_median.to_s
+# medianOfAStream.insert_num(5)
+# puts "The median is: " + medianOfAStream.find_median.to_s
+# medianOfAStream.insert_num(4)
+# puts "The median is: " + medianOfAStream.find_median.to_s
 
 
