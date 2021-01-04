@@ -5,7 +5,29 @@
 
 
 def find_subsets(nums)
+	sorted_nums = nums.sort()
 
+	subsets = []
+	subsets.append([])
+
+	start_index, end_index = 0, 0
+
+	for i in 0..(nums.length - 1)
+		start_index = 0
+
+		if i > 0 and nums[i] == nums[i - 1]
+			start_index = end_index + 1
+		end
+
+		end_index = subsets.length - 1
+		for j in start_index..end_index
+			subset1 = Array.new(subsets[j])
+			subset1.append(nums[i])
+			subsets.append(subset1)
+		end
+	end
+
+	return subsets
 end
 
 
