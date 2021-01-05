@@ -14,16 +14,28 @@ def binary_search(arr, key)
 	start_index = 0
 	end_index = arr.length - 1
 
-	while start_index < end_index
+	ascending = arr[start_index] < arr[end_index]
+
+	while start_index <= end_index
 
 		mid = (start_index + end_index) / 2
 
 		if arr[mid] == key
-			return arr[mid]
-		elsif arr[mid] > key
-			end_index -= 1
+			return mid
+		end
+
+		if ascending
+			if arr[mid] > key
+				end_index = mid - 1
+			else
+				start_index = mid + 1
+			end
 		else
-			start_index += 1
+			if arr[mid] > key
+				end_index = mid - 1
+			else
+				start_index = mid + 1
+			end
 		end
 	end
 	return -1
