@@ -9,6 +9,9 @@
 # Input: [10, 6, 4], key = 10
 # Output: 0
 
+
+# O(logN) T | O(1) S
+
 def binary_search(arr, key)
 
 	start_index = 0
@@ -32,9 +35,9 @@ def binary_search(arr, key)
 			end
 		else
 			if arr[mid] > key
-				end_index = mid - 1
-			else
 				start_index = mid + 1
+			else
+				end_index = mid - 1
 			end
 		end
 	end
