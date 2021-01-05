@@ -11,6 +11,22 @@
 
 def binary_search(arr, key)
 
+	start_index = 0
+	end_index = arr.length - 1
+
+	while start_index < end_index
+
+		mid = (start_index + end_index) / 2
+
+		if arr[mid] == key
+			return arr[mid]
+		elsif arr[mid] > key
+			end_index -= 1
+		else
+			start_index += 1
+		end
+	end
+	return -1
 end
 
 
