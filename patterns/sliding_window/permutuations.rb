@@ -2,6 +2,7 @@
 # Output: true
 # Explanation: The string contains "bca" which is a permutation of the given pattern.
 
+# O(N+M) T | O(M) S
 
 def find_permutation(str, pattern)
 
