@@ -45,7 +45,7 @@ def binary_search(arr, key)
 end
 
 
-puts binary_search([4, 6, 10], 10)
+puts binary_search([4, 6, 10, 10], 10)
 puts binary_search([1, 2, 3, 4, 5, 6, 7], 5)
 puts binary_search([10, 6, 4], 10)
 puts binary_search([10, 6, 4], 4)
