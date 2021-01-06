@@ -10,9 +10,9 @@ def find_permutation(str, pattern)
 
 	pattern.each_char do |char|
 		if !char_map.has_key?(char)
-			char_map[key] = 1
+			char_map[char] = 1
 		else
-			char_map[key] += 1
+			char_map[char] += 1
 		end
 	end
 
@@ -48,6 +48,9 @@ def find_permutation(str, pattern)
 	return false
 end
 
-str = "oidbcaf"
-pattern = "abc"
-puts "permutation exists: #{find_permutation(str, pattern).to_s} "
+puts 'Permutation exist: ' + find_permutation("oidbcaf", "abc").to_s
+puts 'Permutation exist: ' + find_permutation("odicf", "dc").to_s
+puts 'Permutation exist: ' + find_permutation("bcdxabcdy", "bcdyabcdx").to_s
+puts 'Permutation exist: ' + find_permutation("aaacb", "abc").to_s
+
+
