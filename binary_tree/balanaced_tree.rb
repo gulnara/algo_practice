@@ -28,6 +28,8 @@ def balanced_tree(root)
 
 end
 
+# O(n) T | S 
+
 def dfs_balanced_tree(node, running_sum, depth)
 
 	if node.nil?
