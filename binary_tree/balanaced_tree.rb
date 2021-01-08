@@ -22,7 +22,6 @@ end
 
 
 def balanced_tree(root)
-
 	depth = []
 
 	dfs_balanced_tree(root, 0, depth)
@@ -32,7 +31,7 @@ end
 def dfs_balanced_tree(node, running_sum, depth)
 
 	if node.nil?
-		return
+		return true
 	end
 
 	running_sum += 1
@@ -79,4 +78,4 @@ root.left.left.left = BinaryTreeNode.new(11)
 root.right.right.right = BinaryTreeNode.new(9)
 root.right.right.right.right = BinaryTreeNode.new(10)
 
-# puts balanced_tree(root)
+puts balanced_tree(root)
