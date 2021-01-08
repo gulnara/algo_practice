@@ -1,6 +1,6 @@
 # Given the head of a Singly LinkedList, write a method to check if the LinkedList is a palindrome or not.
 
-# Your algorithm should use constant space and the input LinkedList should be in the original form once the algorithm is finished. The algorithm should have O(N)O(N) time complexity where ‘N’ is the number of nodes in the LinkedList.
+# Your algorithm should use constant space and the input LinkedList should be in the original form once the algorithm is finished. The algorithm should have O(N) time complexity where ‘N’ is the number of nodes in the LinkedList.
 
 
 # Input: 2 -> 4 -> 6 -> 4 -> 2 -> null
@@ -22,6 +22,8 @@ end
 
 
 def is_palindromic_linked_list(head)
+
+
 
 end
 
