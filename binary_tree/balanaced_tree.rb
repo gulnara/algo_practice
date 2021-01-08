@@ -3,8 +3,7 @@
 
 class BinaryTreeNode
 
-	attr_accessor :value
-	attr_reader :left, :right
+	attr_accessor :value, :left, :right
 
 	def initialize(value)
 		@value = value
@@ -35,15 +34,20 @@ end
 def dfs_balanced_tree(node, depth)
 	running_sum = 0
 
-	while !node.nil? do 
-		running_sum += 1
-
-		dfs_balanced_tree(node.left, depth)
-		dfs_balanced_tree(node.right, depth)
-
+	if node.nil?
+		return
 	end
 
-	depth.append(running_sum)
+	running_sum += 1
+
+	if node.left.nil? and node.right.nil?
+		depth.append(running_sum)
+	end
+
+	dfs_balanced_tree(node.left, depth)
+	dfs_balanced_tree(node.right, depth)
+
+	
 end
 
 
