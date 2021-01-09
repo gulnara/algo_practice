@@ -14,6 +14,7 @@ words = [
   'othellolagkage',
 ]
 
+# O(logn) T | O(1) S
 def find_rotation_point(words)
 
 	first_word = words.first
