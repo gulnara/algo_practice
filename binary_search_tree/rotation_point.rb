@@ -30,9 +30,9 @@ def find_rotation_point(words)
 		else
 			ceiling_index = random_guess
 		end
-	end
-
-	return ceiling_index if floor_index + 1 == ceiling_index
-
+		return ceiling_index if floor_index + 1 == ceiling_index
+	end	
 end
+
+puts find_rotation_point(words)
 
