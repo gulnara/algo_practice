@@ -11,6 +11,7 @@
 # Output: 4
 # Explanation: The smallest number greater than or equal to '12' is '15' having index '4'.
 
+# O(logn) T | O(1) S 
 
 def search_ceiling_of_a_number(arr, key)
 
