@@ -17,27 +17,36 @@ def search_ceiling_of_a_number(arr, key)
 	start_index = 0
 	end_index = arr.length - 1
 
+	if key > arr[arr.length - 1]
+		return -1
+	end
+
 	min = []
-	while start_index < end_index
+	while start_index <= end_index
 		mid = (start_index + end_index) / 2
 
-		if arr[mid] >= key
+		if key > arr[mid]
 			min.append(mid)
-			end_index = mid
+			start_index = mid + 1
+		elsif key < arr[mid]
+			min.append(mid)
+			end_index = mid - 1
 		else
-			start_index = mid
+			return mid
 		end
 	end
 
-	if min.empty?
-		return -1
-	else
-		return min[].min()
-	end
+	return start_index
+	# puts min
+	# if min.empty?
+	# 	return -1
+	# else
+	# 	return min.min()
+	# end
 end
 
-puts "should return 1:  " + search_ceiling_of_a_number([4, 6, 10], 6).to_s
+# puts "should return 1:  " + search_ceiling_of_a_number([4, 6, 10], 6).to_s
 puts "should return 4:  " + search_ceiling_of_a_number([1, 3, 8, 10, 15], 12).to_s
-puts "should return -1:  " + search_ceiling_of_a_number([4, 6, 10], 17).to_s
-puts "should return 0:  " + search_ceiling_of_a_number([4, 6, 10], -1).to_s
+# puts "should return -1:  " + search_ceiling_of_a_number([4, 6, 10], 17).to_s
+# puts "should return 0:  " + search_ceiling_of_a_number([4, 6, 10], -1).to_s
 
