@@ -36,8 +36,8 @@ def search_ceiling_of_a_number(arr, key)
 	end
 end
 
-puts search_ceiling_of_a_number([4, 6, 10], 6)
-puts search_ceiling_of_a_number([1, 3, 8, 10, 15], 12)
-puts search_ceiling_of_a_number([4, 6, 10], 17)
-puts search_ceiling_of_a_number([4, 6, 10], -1)
+puts "should return 1:  " + search_ceiling_of_a_number([4, 6, 10], 6).to_s
+puts "should return 4:  " + search_ceiling_of_a_number([1, 3, 8, 10, 15], 12).to_s
+puts "should return -1:  " + search_ceiling_of_a_number([4, 6, 10], 17).to_s
+puts "should return 0:  " + search_ceiling_of_a_number([4, 6, 10], -1).to_s
 
