@@ -17,13 +17,23 @@ def search_ceiling_of_a_number(arr, key)
 	start_index = 0
 	end_index = arr.length - 1
 
+	min = []
 	while start_index < end_index
 		mid = (start_index + end_index) / 2
 
+		if arr[mid] >= key
+			min.append(mid)
+			end_index = mid
+		else
+			start_index = mid
+		end
 	end
 
-	return -1
-
+	if min.empty?
+		return -1
+	else
+		return min[].min()
+	end
 end
 
 puts search_ceiling_of_a_number([4, 6, 10], 6)
