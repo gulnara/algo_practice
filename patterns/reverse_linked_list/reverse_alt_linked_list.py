@@ -18,10 +18,19 @@ class Node:
         print()
 
 def reverse_alternate_k_elements(head, k):
-    current = head
-    next_node = current.next
+    if k <= 1 or head is None:
+        return head
 
-    # while 
+
+    current = head
+    previous = nil
+
+    while current is not None:
+        last_node_previous_part = previous
+        last_node_sub_list = current
+        next = None
+
+        
 
     return head
 
