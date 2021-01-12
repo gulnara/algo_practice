@@ -45,7 +45,14 @@ def reverse_alternate_k_elements(head, k):
 
         last_node_sub_list.next = current
         previous = last_node_sub_list
-        
+
+        i = 0 
+
+        while current is not None and i < k:
+            previous = current
+            current = current.next
+            i += 1
+
 
     return head
 
