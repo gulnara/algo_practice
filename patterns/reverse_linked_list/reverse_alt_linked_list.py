@@ -4,6 +4,8 @@ from __future__ import print_function
 # If, in the end, you are left with a sub-list with less than 'k' elements, reverse it too.
 
 
+# O(N) T| O(1) S
+
 class Node:
 
     def __init__(self, value, next=None):
