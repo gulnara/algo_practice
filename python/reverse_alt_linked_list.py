@@ -1,4 +1,4 @@
-from __future__ import print_function
+# from __future__ import print_function
 # Given the head of a LinkedList and a number 'k', reverse every alternating 'k' sized sub-list starting from the head.
 
 # If, in the end, you are left with a sub-list with less than 'k' elements, reverse it too.
@@ -15,9 +15,10 @@ class Node:
     def print_list(self):
         temp = self
         while temp is not None:
-            print(temp.value)
+            print temp.value 
+            print 'this'
             temp = temp.next
-        print()
+        print
 
 def reverse_alternate_k_elements(head, k):
     if k <= 1 or head is None:
@@ -59,7 +60,7 @@ def reverse_alternate_k_elements(head, k):
     return head
 
 
-def main():
+# def main():
     head = Node(1)
     head.next = Node(2)
     head.next.next = Node(3)
@@ -73,4 +74,6 @@ def main():
     result.print_list()
 
 
-main()
+print "hello"
+
+# main()
